@@ -162,13 +162,13 @@ function openApp(app) {
   appContent.innerHTML = ''; // Clear previous content
 
   if (app === 'tictactoe') {
-    startTicTacToe(appContent);
+    startTicTacToe(appContent); // Keep this for Tic-Tac-Toe functionality
   } else if (app === 'linkedin') {
-    appContent.innerHTML = '<h3>LinkedIn</h3><p>Link to your LinkedIn profile here.</p>';
+    window.open("https://www.linkedin.com/in/euler-katwimuke-1205181b4", "_blank"); 
   } else if (app === 'github') {
-    appContent.innerHTML = '<h3>GitHub</h3><p>Link to your GitHub profile here.</p>';
+    window.open("https://github.com/blinja", "_blank"); 
   } else if (app === 'twitter') {
-    appContent.innerHTML = '<h3>Twitter</h3><p>Link to your Twitter profile here.</p>';
+    window.open("https://x.com/EulerKatwimuke", "_blank"); // Opens Twitter in a new tab
   } else if (app === 'contact') {
     appContent.innerHTML = `
       <h3>Contact Me</h3>
@@ -181,6 +181,7 @@ function openApp(app) {
     `;
   }
 }
+
 
 function startTicTacToe(container) {
   const board = document.createElement('div');
